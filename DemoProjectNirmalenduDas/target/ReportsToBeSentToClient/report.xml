@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="34.433">
+    <testcase classname="Application Login" name="Login to WordPress My Profile" time="22.176">
+        <system-out><![CDATA[Given Initialize the Chrome Browser and launch the "https://wordpress.com/me".passed
+And Navigate to WordPress Login Page........................................passed
+When User login into application with "nirmalautomation967448@gmail.com" and "Laksha#2".passed
+Then My Profile page is populated and "My Profile" page header should be displayed.passed
+Then Username "nirmalenduautomation" should be displayed at the My Profile Page.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Application Login" name="Validate that by default Hide Profile Details toggle button is unselected" time="0.276">
+        <system-out><![CDATA[Given User is on My Profile page............................................passed
+When Hide My Profile info toggle button is displayed........................passed
+Then Hide My profile info toggle buton should not be selected by default....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Application Login" name="Validate Save My Profile Details button functionality when First name and Last name is blank" time="1.101">
+        <system-out><![CDATA[Given Navigate to My Profile Page and "My Profile" page header is displayed.passed
+When First Name is "", Last Name is "" and About Me is "This is automation".passed
+Then Save My Profile Details button enabled is "true".......................passed
+Then Clear all fields.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Application Login" name="Validate Save My Profile Details button functionality when About Me field is blank" time="1.124">
+        <system-out><![CDATA[Given Navigate to My Profile Page and "My Profile" page header is displayed.passed
+When First Name is "Name1", Last Name is "Title1" and About Me is ""........passed
+Then Save My Profile Details button enabled is "true".......................passed
+Then Clear all fields.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Application Login" name="Validate Save My Profile Details button functionality when all three fields are blank" time="0.575">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given Navigate to My Profile Page and "My Profile" page header is displayed.passed
+When First Name is "", Last Name is "" and About Me is ""...................passed
+Then Save My Profile Details button enabled is "false"......................failed
+Then Clear all fields.......................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepDefinition.StepDefinition.save_my_profile_details_button_enabled_is_something(StepDefinition.java:112)
+	at ✽.Save My Profile Details button enabled is "false"(file:///C:/Java%20Workspace/DemoProjectNirmalenduDas/DemoProjectNirmalenduDas/src/test/java/Feature/Login.feature:30)
+]]></failure>
+    </testcase>
+    <testcase classname="Application Login" name="Validate that after providing all valid information and click on save user is able to see the saved information while oggin again" time="8.492">
+        <system-out><![CDATA[Given Fill First Name as "Nirmalendu" and Last name as "Das" and AbountMe as "This is automation test case".passed
+When User clicks on Save button, Save success message should be displayed...passed
+Then User logs out of the application and close the browser.................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="Interview.DemoProjectNirmalenduDas.ValidateVisibeUserName"/>
+      <class name="Interview.DemoProjectNirmalenduDas.WordPressProfilePageValidationPage"/>
+      <class name="Interview.DemoProjectNirmalenduDas.ValidateSaveMyProfileButton"/>
+      <class name="Interview.DemoProjectNirmalenduDas.SaveProfileDetails"/>
+      <class name="Interview.DemoProjectNirmalenduDas.ClearProfileData"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
